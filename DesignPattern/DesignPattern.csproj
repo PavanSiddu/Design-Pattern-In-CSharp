@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F236D3A3-DBC9-4FB9-BA93-0170CB341AD8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DesignPattern</RootNamespace>
+    <AssemblyName>DesignPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DesignPattern.BehaviouralDesignPattern.StrategyDesignPattern.Client</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BehaviouralDesignPattern\ChainOfResponsibilityPattern\AbstractHandler.cs" />
+    <Compile Include="BehaviouralDesignPattern\ChainOfResponsibilityPattern\AmbulanceHandler.cs" />
+    <Compile Include="BehaviouralDesignPattern\ChainOfResponsibilityPattern\CivilianVehicleHandler.cs" />
+    <Compile Include="BehaviouralDesignPattern\ChainOfResponsibilityPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\ChainOfResponsibilityPattern\FireTruckHandler.cs" />
+    <Compile Include="BehaviouralDesignPattern\ChainOfResponsibilityPattern\IHandler.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\ConcreateCommands\DownCommand.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\ICommand.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\ConcreateCommands\OffCommand.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\ConcreateCommands\OnCommand.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\Invoker.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\Reciever\IDevice.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\Reciever\Light.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\Reciever\Speaker.cs" />
+    <Compile Include="BehaviouralDesignPattern\CommandDesignPattern\ConcreateCommands\UpCommand.cs" />
+    <Compile Include="BehaviouralDesignPattern\IteratorDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\IteratorDesignPattern\CustomIterableCollection.cs" />
+    <Compile Include="BehaviouralDesignPattern\IteratorDesignPattern\CustomIterableCollectionIterator.cs" />
+    <Compile Include="BehaviouralDesignPattern\IteratorDesignPattern\IIterableCollection.cs" />
+    <Compile Include="BehaviouralDesignPattern\IteratorDesignPattern\IIterator.cs" />
+    <Compile Include="BehaviouralDesignPattern\MediatorDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\MediatorDesignPattern\Component.cs" />
+    <Compile Include="BehaviouralDesignPattern\MediatorDesignPattern\ComponentA.cs" />
+    <Compile Include="BehaviouralDesignPattern\MediatorDesignPattern\ComponentB.cs" />
+    <Compile Include="BehaviouralDesignPattern\MediatorDesignPattern\ConcreteMediator.cs" />
+    <Compile Include="BehaviouralDesignPattern\MediatorDesignPattern\IMediator.cs" />
+    <Compile Include="BehaviouralDesignPattern\ObserverDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\ObserverDesignPattern\ConcreteSubject.cs" />
+    <Compile Include="BehaviouralDesignPattern\ObserverDesignPattern\IObserver.cs" />
+    <Compile Include="BehaviouralDesignPattern\ObserverDesignPattern\Message.cs" />
+    <Compile Include="BehaviouralDesignPattern\ObserverDesignPattern\ISubject.cs" />
+    <Compile Include="BehaviouralDesignPattern\ObserverDesignPattern\ObserverA.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\ConcreateFoodOrderState\DeliveredState.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\FoodOrder.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\ConcreateFoodOrderState\FoodPreparationState.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\IFoodOrderState.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\ConcreateFoodOrderState\OrderInitiatedState.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\ConcreateFoodOrderState\OrderPlacedState.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\ConcreateFoodOrderState\OutForDeliveryState.cs" />
+    <Compile Include="BehaviouralDesignPattern\StateDesignPattern\ConcreateFoodOrderState\WaitingToBePickedState.cs" />
+    <Compile Include="BehaviouralDesignPattern\StrategyDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\StrategyDesignPattern\FlyingKick.cs" />
+    <Compile Include="BehaviouralDesignPattern\StrategyDesignPattern\IKickStrategy.cs" />
+    <Compile Include="BehaviouralDesignPattern\StrategyDesignPattern\IMartialArt.cs" />
+    <Compile Include="BehaviouralDesignPattern\StrategyDesignPattern\KungFu.cs" />
+    <Compile Include="BehaviouralDesignPattern\StrategyDesignPattern\OneInchPunch.cs" />
+    <Compile Include="BehaviouralDesignPattern\TemplateDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\TemplateDesignPattern\PizzaMaker.cs" />
+    <Compile Include="BehaviouralDesignPattern\TemplateDesignPattern\SimpleCheeseCornPizzaMaker.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\Client.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\ConcreteVisitor\AreaVisitor.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\ConcreteElement\Circle.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\IShapeVisitor.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\IShape.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\ConcreteVisitor\PerimeterVisitor.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\ConcreteElement\Rectangle.cs" />
+    <Compile Include="BehaviouralDesignPattern\VisitorDesignPattern\ConcreteElement\Square.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\AbstractVehicleFactory.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Auto\Auto.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Auto\PersonalAuto.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Auto\SharedAuto.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Bike\Bike.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Bike\NormalBike.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Bike\SportsBike.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Car\Car.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Car\MegaCar.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Car\MicroCar.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Car\MiniCar.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Client.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\FactoryProvider.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Factory\AutoFactory.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Factory\BikeFactory.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Factory\CarFactory.cs" />
+    <Compile Include="CreationalDesignPattern\AbstractFactoryDesignPattern\Vehicle.cs" />
+    <Compile Include="CreationalDesignPattern\BuilderDesignPattern\Client.cs" />
+    <Compile Include="CreationalDesignPattern\BuilderDesignPattern\Customer.cs" />
+    <Compile Include="CreationalDesignPattern\BuilderDesignPattern\CustomerBuilder.cs" />
+    <Compile Include="CreationalDesignPattern\BuilderDesignPattern\ICustomerBuilder.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryDesignPattern\ButterscotchMilkshake.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryDesignPattern\Client.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryDesignPattern\Milkshake.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryDesignPattern\MilkshakeFactory.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryDesignPattern\MilkshakeName.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryDesignPattern\OreoMilkshake.cs" />
+    <Compile Include="CreationalDesignPattern\FactoryDesignPattern\VanillaMilkshake.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CreationalDesignPattern\PrototypeDesignPattern\Bike.cs" />
+    <Compile Include="CreationalDesignPattern\PrototypeDesignPattern\Car.cs" />
+    <Compile Include="CreationalDesignPattern\PrototypeDesignPattern\Client.cs" />
+    <Compile Include="CreationalDesignPattern\PrototypeDesignPattern\Vehicle.cs" />
+    <Compile Include="CreationalDesignPattern\SingletonDesignPattern\Client.cs" />
+    <Compile Include="CreationalDesignPattern\SingletonDesignPattern\Singleton.cs" />
+    <Compile Include="StructuralDesignPattern\AdapterDesignPattern\Client.cs" />
+    <Compile Include="StructuralDesignPattern\AdapterDesignPattern\GalleryApp.cs" />
+    <Compile Include="StructuralDesignPattern\AdapterDesignPattern\IAdvancedImageViewer.cs" />
+    <Compile Include="StructuralDesignPattern\AdapterDesignPattern\IImageViewer.cs" />
+    <Compile Include="StructuralDesignPattern\AdapterDesignPattern\ImageAdapter.cs" />
+    <Compile Include="StructuralDesignPattern\AdapterDesignPattern\JpgShower.cs" />
+    <Compile Include="StructuralDesignPattern\AdapterDesignPattern\PngShower.cs" />
+    <Compile Include="StructuralDesignPattern\BridgeDesignPattern\Client.cs" />
+    <Compile Include="StructuralDesignPattern\BridgeDesignPattern\IResource.cs" />
+    <Compile Include="StructuralDesignPattern\BridgeDesignPattern\View.cs" />
+    <Compile Include="StructuralDesignPattern\CompositeDesignPattern\Client.cs" />
+    <Compile Include="StructuralDesignPattern\CompositeDesignPattern\Star.cs" />
+    <Compile Include="StructuralDesignPattern\CompositeDesignPattern\StarCollection.cs" />
+    <Compile Include="StructuralDesignPattern\CompositeDesignPattern\UniverseComponent.cs" />
+    <Compile Include="StructuralDesignPattern\DecoratorDesignPattern\Color.cs" />
+    <Compile Include="StructuralDesignPattern\DecoratorDesignPattern\Client.cs" />
+    <Compile Include="StructuralDesignPattern\DecoratorDesignPattern\ColorDecorator.cs" />
+    <Compile Include="StructuralDesignPattern\DecoratorDesignPattern\IColor.cs" />
+    <Compile Include="StructuralDesignPattern\DecoratorDesignPattern\PatternDecorator.cs" />
+    <Compile Include="StructuralDesignPattern\FacadeDesignPattern\Client.cs" />
+    <Compile Include="StructuralDesignPattern\FacadeDesignPattern\Delivering.cs" />
+    <Compile Include="StructuralDesignPattern\FacadeDesignPattern\FacadeOperator.cs" />
+    <Compile Include="StructuralDesignPattern\FacadeDesignPattern\Payment.cs" />
+    <Compile Include="StructuralDesignPattern\FacadeDesignPattern\PlaceOrder.cs" />
+    <Compile Include="StructuralDesignPattern\FlyweightDesignPattern\Client.cs" />
+    <Compile Include="StructuralDesignPattern\FlyweightDesignPattern\Game.cs" />
+    <Compile Include="StructuralDesignPattern\FlyweightDesignPattern\Tree.cs" />
+    <Compile Include="StructuralDesignPattern\FlyweightDesignPattern\TreeFactory.cs" />
+    <Compile Include="StructuralDesignPattern\FlyweightDesignPattern\TreePosition.cs" />
+    <Compile Include="StructuralDesignPattern\ProxyDesignPattern\Client.cs" />
+    <Compile Include="StructuralDesignPattern\ProxyDesignPattern\IImage.cs" />
+    <Compile Include="StructuralDesignPattern\ProxyDesignPattern\Proxy.cs" />
+    <Compile Include="StructuralDesignPattern\ProxyDesignPattern\RealImage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
